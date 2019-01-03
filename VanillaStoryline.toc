@@ -1,4 +1,4 @@
-## Interface: 11200
+## Interface: 20400
 ## Title: VanillaStoryline
 ## Author: |cffABD473Renew @ nostalrius.org
 ## Version: 1.0.0

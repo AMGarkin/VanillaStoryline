@@ -656,12 +656,12 @@ function storyline:updateGossip()
 	local ID = 0 -- ID Button Counter
 	-- local functions -> API delivers unknown/variable num of arguments
 	local function setQuests(...)
-		for i=1,arg.n,2 do
+		for i=1,select("#", ...),3 do
 			counter = counter + 1
 			ID = ID + 1
 			local ChooseID = ID
 			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Icon.Texture:SetTexture("Interface\\GossipFrame\\AvailableQuestIcon")
-			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Font:SetText(arg[i])
+			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Font:SetText(select(i, ...))
 			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Button:SetID(ChooseID)
 			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Button.type = "Available"
 			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Button:SetScript("OnClick",function() PlaySound("igMainMenuOptionCheckBoxOn"); GossipTitleButton_OnClick() end)
@@ -670,12 +670,12 @@ function storyline:updateGossip()
  	end
 
 	local function setActiveQuests(...)
-		for i=1,arg.n,2 do
+		for i=1,select("#", ...),3 do
 			counter = counter + 1
 			ID = ID + 1
 			local ChooseID = ID
 			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Icon.Texture:SetTexture("Interface\\GossipFrame\\ActiveQuestIcon")
-			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Font:SetText(arg[i])
+			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Font:SetText(select(i, ...))
 			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Button:SetID(ChooseID)
 			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Button.type = "Active"
 			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Button:SetScript("OnClick",function() PlaySound("igMainMenuOptionCheckBoxOn"); GossipTitleButton_OnClick() end)
@@ -684,12 +684,12 @@ function storyline:updateGossip()
  	end
 
 	local function setOptions(...)
-		for i=1,arg.n,2 do
+		for i=1,select("#", ...),2 do
 			counter = counter + 1
 			ID = ID + 1
 			local ChooseID = ID
-			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Icon.Texture:SetTexture("Interface\\GossipFrame\\" .. arg[i+1] .. "GossipIcon")
-			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Font:SetText(arg[i])
+			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Icon.Texture:SetTexture("Interface\\GossipFrame\\" .. select(i+1, ...) .. "GossipIcon")
+			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Font:SetText(select(i, ...))
 			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Button:SetID(ChooseID)
 			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Button.type = "Option"
 			storyline.Gossip.Frame.Scrollframe.Content.Block[counter].Button:SetScript("OnClick",function() PlaySound("igMainMenuOptionCheckBoxOn"); GossipTitleButton_OnClick() end)

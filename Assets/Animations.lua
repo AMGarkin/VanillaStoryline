@@ -113,6 +113,23 @@ Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL = {
 		[LAUGH_ID] = 3333,
 		[SALUTE_ID] = 2000,
 	},
+	-- DRAENEI
+	["Character\\Draenei\\Female\\DraeneiFemale"] = {
+		[EXCLAME_ID] = 2000,
+		[QUESTION_ID] = 1850,
+		[TALK_ID] = 2850,
+		[YES_ID] = 1900,
+		[NOPE_ID] = 2000,
+		[ACLAIM_ID] = 2000,
+	},
+	["Character\\Draenei\\Male\\DraeneiMale"] = {
+		[EXCLAME_ID] = 3000,
+		[QUESTION_ID] = 1850,
+		[TALK_ID] = 3200,
+		[YES_ID] = 1300,
+		[NOPE_ID] = 1200,
+		[ACLAIM_ID] = 1800,
+	},
 	-- ORCS
 	["Character\\Orc\\Female\\OrcFemale"] = { -- readout
 		[EXCLAME_ID] = 2000,
@@ -126,7 +143,6 @@ Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL = {
 		[LAUGH_ID] = 3300,
 		[SALUTE_ID] = 1667,
 	},
-
 	["Character\\Orc\\Male\\OrcMale"] = { --readout
 		[EXCLAME_ID] = 2000,
 		[QUESTION_ID] = 1800,
@@ -157,6 +173,22 @@ Storyline_ANIMATION_SEQUENCE_DURATION_BY_MODEL = {
 		[WAVE_ID] = 2000,
 		[LAUGH_ID] = 3300,
 		[SALUTE_ID] = 1667,
+	},
+	-- BLOOD ELVES
+	["Character\\BloodElf\\Female\\BloodElfFemale"] = {
+		[EXCLAME_ID] = 2800,
+		[QUESTION_ID] = 1400,
+		[YES_ID] = 1400,
+		[NOPE_ID] = 2000,
+		[ACLAIM_ID] = 1500,
+	},
+	["Character\\BloodElf\\Male\\BloodElfMale"] = {
+		[EXCLAME_ID] = 2000,
+		[QUESTION_ID] = 2000,
+		[TALK_ID] = 2000,
+		[YES_ID] = 1300,
+		[NOPE_ID] = 1300,
+		[ACLAIM_ID] = 2100,
 	},
 	-- Tauren
 	["Character\\Tauren\\Female\\TaurenFemale"] = { -- readout
